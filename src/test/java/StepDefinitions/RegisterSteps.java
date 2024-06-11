@@ -38,7 +38,7 @@ public class RegisterSteps extends DriverInitializer {
 
     @And("choose distributor as Tipe Bisnis")
     public void chooseDistributorAsTipeBisnis() {
-        registerPage.selectBusinessType();
+        registerPage.selectBusinessType("distibutor");
     }
 
     @And("clicks register button")
@@ -49,5 +49,20 @@ public class RegisterSteps extends DriverInitializer {
     @Then("User is navigated to activation account page")
     public void userIsNavigatedActivationAccountPage() {
         accountActivationPage.verifyTitle();
+    }
+
+    @And("choose retail as Tipe Bisnis")
+    public void chooseRetailAsTipeBisnis() {
+        registerPage.selectBusinessType("retail");
+    }
+
+    @And("choose brand as Tipe Bisnis")
+    public void chooseBrandAsTipeBisnis() {
+        registerPage.selectBusinessType("brand");
+    }
+
+    @And("choose seller online as Tipe Bisnis")
+    public void chooseSellerOnlineAsTipeBisnis() {
+        registerPage.selectBusinessType("online");
     }
 }
